@@ -26,7 +26,7 @@ function getDefaultSteps(browser) {
 async function setupMetaMask(browser, options, steps) {
     const page = await getMetaMaskPage(browser);
     steps = steps ?? getDefaultSteps(browser);
-    await page.setViewport({ width: 1920, height: 1080 });
+    await page.setViewport({ width: 1440, height: 900 });
     // goes through the installation steps required by MetaMask
     for (const step of steps) {
         await step(page, options);

@@ -33,7 +33,7 @@ async function declineAnalytics(metaMaskPage) {
 }
 exports.declineAnalytics = declineAnalytics;
 async function importAccount(metaMaskPage, { seed = "already turtle birth enroll since owner keep patch skirt drift any dinner", password = "password1234", }) {
-    await (0, helpers_1.waitForOverlay)(metaMaskPage);
+      await metaMaskPage.waitForTimeout(2000);
     await (0, helpers_1.clickOnElement)(metaMaskPage, "onboarding-terms-checkbox");
     await (0, helpers_1.clickOnButton)(metaMaskPage, "onboarding-import-wallet");
     await (0, helpers_1.clickOnButton)(metaMaskPage, "metametrics-i-agree");
@@ -52,6 +52,7 @@ async function importAccount(metaMaskPage, { seed = "already turtle birth enroll
     await (0, helpers_1.clickOnButton)(metaMaskPage, "pin-extension-next");
     // onboarding/pin-extension tab 2 URL
     await (0, helpers_1.clickOnNavigationButton)(metaMaskPage, "pin-extension-done");
+    await (0, helpers_1.waitForOverlay)(metaMaskPage);
 }
 exports.importAccount = importAccount;
 const closePopup = async (page) => {
