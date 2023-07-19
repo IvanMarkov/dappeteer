@@ -42,6 +42,7 @@ export declare type Dappeteer = {
     unlock: (password: string) => Promise<void>;
     acceptAddNetwork: (shouldSwitch?: boolean) => Promise<void>;
     rejectAddNetwork: () => Promise<void>;
+    addNetwork: () => Promise<void>;
     acceptAddToken: () => Promise<void>;
     rejectAddToken: () => Promise<void>;
     importPK: (pk: string) => Promise<void>;

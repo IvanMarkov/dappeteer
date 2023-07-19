@@ -36,6 +36,7 @@ const getMetaMask = (page) => {
         resolve({
             acceptAddNetwork: (0, addNetwork_1.acceptAddNetwork)(page),
             rejectAddNetwork: (0, addNetwork_1.rejectAddNetwork)(page),
+            addNetwork: (0, addNetwork_1.addNetwork)(page),
             approve: (0, approve_1.approve)(page),
             confirmTransaction: (0, confirmTransaction_1.confirmTransaction)(page, getSingedIn),
             importPK: (0, importPk_1.importPk)(page),
